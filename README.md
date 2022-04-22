@@ -1,11 +1,13 @@
 # Уроки JavaScript  Урок №14 - Обработка форм
-[GHPages](https://reregaga.github.io/js_simple_projects/lesson 14/form.html)
+[GHPages](https://reregaga.github.io/js_simple_projects/lesson%2014/form.html)
 
 # Практика JavaScript №1 Анимированная прокрутка страницы на jQuery
+[GHPages](https://reregaga.github.io/js_simple_projects/practice%201%20anim-pagescroll-jQuery/index.html)
 
 # Практика JavaScript №2 Игра Змеика на чистом JavaScript и HTML5 за 45 минут!
 - Original: https://www.c-sharpcorner.com/article/how-to-develop-snake-game-in-javascript/
-- https://itproger.com/news/sozdanie-igri-zmeyka-na-chistom-javascript-i-html5
+- https://itproger.com/news/sozdanie-igri-zmeyka-na-chistom-javascript-i-html5  
+[GHPages](https://reregaga.github.io/js_simple_projects/practice%202%20game-Snake-VanillaJS/index.html)
 
 # Практика JavaScript №4 Приложение с Bootstrap 4 - конвертор величин
 
