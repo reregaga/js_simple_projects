@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form 
+        action="" // page
+        method="get" // for server
+        name="test"
+        "onsubmit='valid(this)'"
+        id="form"
+        ><!-- onsubmit="valid(this)" -->
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="Имя" id="name" /><br />
+        <label for="email">Email:</label>
+        <input type="text" name="email" placeholder="Email" id="email" /><br />
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" placeholder="Пароль" id="password" /><br />
+        <label for="RePassword">Проверка пароля:</label>
+        <input type="password" name="RePassword" placeholder="Проверка пароля" id="RePassword" /><br />
+        <span>Пол:</span>
+        <input type="radio" name="state" id="male" value="Мужской" /><label for="male">Мужской</label>
+        <input type="radio" name="state" id="female" value="Женский" for/><label for="female">Женский</label>
+        <br />
+        <!--<input type="submit" name="submit" value="Готово!" /> проблема если у пользователя отключен js -->
+        <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово!" /> <!-- не перезагружает страницу в отличие от type=submit-->
+    </form>
+<script>
+    function valid(form){
+        var fail = false;
+        var name= form.name.value;
+        var email = form.email.value;
+        var password = form.password.value;
+        var RePassword = form.RePassword.value;
+        var state = form.state.value;
+
+        var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+
+        if(name === "" || name === " ")
+            fail = "Не введено имя";
+        //else if(email === "")
+        //else if(email.split('@').length - 1) // проверка на наличие символа @
+        else if(adr_pattern.test(email) === false)
+            fail = "Email не введен";
+        else if(password === "")
+            fail = "Не введен пароль";
+        else if(password !== RePassword)
+            fail = "Пароли не совпадают"
+        else if(state === "")
+            fail = "Пол не указан"
+
+        if(fail)
+            alert(fail);
+        else 
+            window.location = "http://google.com" // перенаправление пользователя на другую страничку
+        /*
+            return false;
+        }else{
+            return true;
+        }*/
+    }
+</script>
+</body>
+</html>
